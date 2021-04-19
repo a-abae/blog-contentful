@@ -1,0 +1,28 @@
+header {
+    display: flex!important;
+    justify-content: center;
+    padding: 25px;
+    margin-bottom: 1em;
+}
+.header-logo img {
+    max-width: 50px;
+    margin: 0 auto;
+    display: block;
+}
+.scrolled {
+    position: fixed;
+    width: calc(100% - 250px);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #ffebb888;
+    transition: all ease 0.5s;
+}
+.scrolled:hover {
+    background: #ffebb8;
+}
+@media screen and (max-width: 767px) {
+    .scrolled {
+        width: 100%;
+    }
+}

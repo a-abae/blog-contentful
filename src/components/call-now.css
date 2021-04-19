@@ -1,0 +1,28 @@
+@media screen and (max-width: 767px) {
+    .call-now {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ff673f;
+        height: 50px;
+        z-index: 10;
+    }
+    .call-now a {
+        color: white;
+        font-weight: bold;
+        text-decoration: underline;
+        width: 100%;
+        text-align: center;
+    }
+    footer {
+        margin-bottom: 50px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .call-now {
+        display: none;
+    }
+}

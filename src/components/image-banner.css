@@ -1,0 +1,9 @@
+.image-banner {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-banner h1 {
+    color: white!important;
+}
