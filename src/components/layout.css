@@ -31,11 +31,33 @@ video {
 .blog .category-container button, .blog .dropdown-menu {
   width: 100%;
 }
-.text-center {
-  text-align: center;
+.blog .post-grid .card {
+  border-radius: 15px;
+  border-color: #e4ac54;
+  margin: 10px auto;
 }
-.text-justified {
-  text-align: justify;
+.blog .post-grid .card h3, .blog .post-grid .card p {
+  padding: 0 10px;
+  color: black;
+}
+.blog .post-grid .card a img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+}
+.blog .post-grid .card a {
+  transition: all 0.5s ease;
+  border-radius: 15px;
+}
+.blog .post-grid .card a:hover {
+  text-decoration: none;
+  background-color: #023640;
+}
+.blog .post-grid .card a:hover > h3 {
+  color: #e4ac54!important;
+}
+.blog .post-grid .card a:hover > p {
+  color: white;
 }
 h1, h2, h3 {
   color: #023640!important;

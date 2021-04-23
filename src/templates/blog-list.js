@@ -5,6 +5,7 @@ import * as rbs from "react-bootstrap"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Placeholder from "../images/placeholder.png"
 
 export default class Blog extends React.Component {
     constructor(props) {
@@ -46,17 +47,17 @@ export default class Blog extends React.Component {
                     </div>
 
                     <div className="post-grid">
-                        <rbs.Row md={3} sm={2} xs={1}>
+                        <rbs.Row lg={3} md={2} sm={2} xs={1}>
                             {posts.map(({ node }) => {
                                 if (node.category.includes(this.state.selectedCategory)) {
                                     return (
                                         <rbs.Col>
-                                            <div key={node.slug}>
-                                                <h3>
-                                                    <Link to={'/blog/' + node.slug}>
-                                                        {node.title}
-                                                    </Link>
-                                                </h3>
+                                            <div className="card" key={node.slug}>
+                                                <Link to={'/blog/' + node.slug} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
+                                                    <img src={node.featuredImage ? node.featuredImage.file.url : Placeholder}/>
+                                                    <h3>{node.title}</h3>
+                                                    <p>excerpt</p>
+                                                </Link>
                                             </div>
                                         </rbs.Col>
                                     )
@@ -82,7 +83,7 @@ export const pageQuery = graphql`
                     category
                     featuredImage {
                         file {
-                        url
+                            url
                         }
                     }
                 }
