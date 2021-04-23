@@ -4,6 +4,9 @@
   .form-typeA .col {
     padding: 0 5px;
   }
+  .submit {
+    justify-content: center;
+  }
   .form-submit {
     width: 100%;
     padding-left: 2px;

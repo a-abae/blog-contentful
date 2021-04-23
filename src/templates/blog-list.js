@@ -53,7 +53,7 @@ export default class Blog extends React.Component {
                                     return (
                                         <rbs.Col>
                                             <div className="card" key={node.slug}>
-                                                <Link to={'/blog/' + node.slug} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
+                                                <Link to={'/blog/' + node.slug}>
                                                     <img src={node.featuredImage ? node.featuredImage.file.url : Placeholder}/>
                                                     <h3>{node.title}</h3>
                                                     <p>{node.excerpt + "..."}</p>
