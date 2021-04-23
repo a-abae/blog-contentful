@@ -4,12 +4,12 @@ footer {
 footer a[aria-current] {
     color: #e4ac54!important;
 }
-.footer-link, .footer-link:active, .footer-link:focus {
+footer a, footer a:active, footer a:focus {
     color: white;
     text-decoration: none;
     transition: color 0.5s ease
 }
-.footer-link:hover, footer a[aria-current]:hover {
+footer a:hover, footer a[aria-current]:hover {
     color: #b2ebed!important;
     text-decoration: none;
 }

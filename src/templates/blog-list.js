@@ -53,7 +53,7 @@ export default class Blog extends React.Component {
                                         <rbs.Col>
                                             <div key={node.slug}>
                                                 <h3>
-                                                    <Link to={'/' + node.slug}>
+                                                    <Link to={'/blog/' + node.slug}>
                                                         {node.title}
                                                     </Link>
                                                 </h3>
@@ -73,10 +73,8 @@ export default class Blog extends React.Component {
 }
 
 export const pageQuery = graphql`
-    query postListQuery($limit: Int!) {
-        allContentfulBlogPost(
-            limit: $limit
-        ) {
+    query postListQuery {
+        allContentfulBlogPost {
             edges {
                 node {
                     title

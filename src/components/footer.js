@@ -17,11 +17,22 @@ export default class Footer extends React.Component {
         return (
             <footer>
                 <div className="footer-area1">
-                    { menuItems.map((menuItem) => 
-                        <Link id={menuItem.slug.includes("blog") ? 'current' : ''} className="footer-link" to={menuItem.slug}>
-                            {menuItem.title}
-                        </Link>
-                    )}
+                    { menuItems.map((menuItem) => {
+                        if (menuItem.slug == '/blog') {
+                            return (
+                                <Link to={menuItem.slug} activeClassName="current" partiallyActive={true}>
+                                    {menuItem.title}
+                                </Link>
+                            )
+                        }
+                        else {
+                            return (
+                                <Link to={menuItem.slug} activeClassName="current">
+                                    {menuItem.title}
+                                </Link>
+                            )
+                        }
+                    })}
                 </div>
             </footer>
         )

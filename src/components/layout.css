@@ -14,7 +14,7 @@ footer {
   padding: 25px 2em;
   margin-top: 1em;
 }
-a[aria-current], #current {
+.current {
   font-weight: bold;
   text-decoration: none;
   color: #e4ac54!important;
