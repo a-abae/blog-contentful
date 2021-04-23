@@ -22,6 +22,7 @@ exports.createPages = ({ graphql, actions }) => {
                             title
                             slug
                             category
+                            excerpt
                             body {
                                 raw
                             }

@@ -56,7 +56,7 @@ export default class Blog extends React.Component {
                                                 <Link to={'/blog/' + node.slug} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
                                                     <img src={node.featuredImage ? node.featuredImage.file.url : Placeholder}/>
                                                     <h3>{node.title}</h3>
-                                                    <p>excerpt</p>
+                                                    <p>{node.excerpt + "..."}</p>
                                                 </Link>
                                             </div>
                                         </rbs.Col>
@@ -81,6 +81,7 @@ export const pageQuery = graphql`
                     title
                     slug
                     category
+                    excerpt
                     featuredImage {
                         file {
                             url
