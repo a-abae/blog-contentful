@@ -52,7 +52,7 @@ export default class Blog extends React.Component {
                                 if (node.category.includes(this.state.selectedCategory)) {
                                     return (
                                         <rbs.Col>
-                                            <div className="card" key={node.slug}>
+                                            <div className={["card", "h-100"].join(" ")} key={node.slug}>
                                                 <Link to={'/blog/' + node.slug}>
                                                     <img src={node.featuredImage ? node.featuredImage.file.url : Placeholder}/>
                                                     <h3>{node.title}</h3>

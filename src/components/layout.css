@@ -43,10 +43,12 @@ video {
 .blog .category-container button, .blog .dropdown-menu {
   width: 100%;
 }
+.blog .post-grid .col {
+  margin: 1em auto;
+}
 .blog .post-grid .card {
   border-radius: 15px;
   border-color: #e4ac54;
-  margin: 10px auto;
 }
 .blog .post-grid .card h3, .blog .post-grid .card p {
   padding: 0 10px;
